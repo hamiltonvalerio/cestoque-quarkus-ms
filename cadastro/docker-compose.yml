@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    container_name: postgres_cadastro_cestoque
+    environment:
+      POSTGRES_PASSWORD: cadastro
+    ports:
+      - "6543:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
